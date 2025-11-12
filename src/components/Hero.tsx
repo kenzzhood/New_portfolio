@@ -7,7 +7,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 animated-gradient">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-fadeIn">
           GOUTHAM SRINATH
