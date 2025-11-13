@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Hero section with blur-in animation and correct content', async ({ page }) => {
-  await page.goto('http://localhost:5178');
+  await page.goto('http://localhost:5173');
 
   // Wait for the hero section to be visible
   await page.waitForSelector('section[role="banner"]');
