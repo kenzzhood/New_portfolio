@@ -157,9 +157,9 @@ export function GenerativeArtScene() {
 }
 
 export function AnomalousMatterHero({
-  title = "Observation Log: Anomaly 7",
-  subtitle = "Matter in a state of constant, beautiful flux.",
-  description = "A new form of digital existence has been observed. It responds to stimuli, changes form, and exudes an unknown energy. Further study is required.",
+  children,
+}: {
+  children: React.ReactNode;
 }) {
   return (
     <section
@@ -172,17 +172,9 @@ export function AnomalousMatterHero({
 
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))] via-[hsl(var(--background))/70] to-transparent z-10" />
 
-      <div className="relative z-20 flex flex-col items-center justify-end h-full pb-20 md:pb-32 text-center">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center">
         <div className="max-w-3xl px-4 animate-fade-in-long">
-          <h1 className="text-sm font-mono tracking-widest text-[hsl(var(--sky-300)/80)] uppercase">
-            {title}
-          </h1>
-          <p className="mt-4 text-3xl md:text-5xl font-bold leading-tight">
-            {subtitle}
-          </p>
-          <p className="mt-6 max-w-xl mx-auto text-base leading-relaxed text-[hsl(var(--gray-300)/80)]">
-            {description}
-          </p>
+          {children}
         </div>
       </div>
     </section>
