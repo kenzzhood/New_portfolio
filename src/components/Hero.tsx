@@ -1,41 +1,37 @@
-export default function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+import { Component } from "@/components/ui/etheral-shadow";
 
+const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 animated-gradient">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-fadeIn">
-          GOUTHAM SRINATH
-        </h1>
-
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-gray-300">
-          Founder & CEO, InnoXR Labs
-        </h2>
-
-        <p className="text-lg md:text-xl text-gray-400 mb-12">
-          AI&ML Developer | AR&VR Developer
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={() => scrollToSection('portfolio')}
-            className="px-8 py-4 bg-white text-[#111111] font-semibold rounded-md hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
-          >
-            View My Work
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-[#111111] transition-all duration-300 transform hover:scale-105"
-          >
-            Get In Touch
-          </button>
+    <div className="flex w-full h-screen justify-center items-center">
+      <Component
+      color="rgba(128, 128, 128, 1)"
+        animation={{ scale: 100, speed: 90 }}
+        noise={{ opacity: 1, scale: 1.2 }}
+        sizing="fill"
+         />
+        <div
+            style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                textAlign: "center",
+                zIndex: 10
+            }}
+        >
+          <section role="banner">
+            <h1 className="md:text-7xl text-6xl lg:text-8xl font-bold text-center text-foreground relative z-20">
+                GOUTHAM SRINATH
+            </h1>
+            <p className="text-2xl mt-4">Full Stack Developer</p>
+            <div className="mt-8 space-x-4">
+                <a href="#" className="bg-white text-black px-6 py-2 rounded-lg">View My Work</a>
+                <a href="#" className="bg-gray-800 px-6 py-2 rounded-lg">Contact Me</a>
+            </div>
+          </section>
         </div>
-      </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Hero;
