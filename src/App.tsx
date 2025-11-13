@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Hero from './components/Hero';
+import { AnomalousMatterHero } from './components/ui/anomalous-matter-hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
@@ -10,7 +10,11 @@ function App() {
   return (
     <div className="min-h-screen bg-[#111111]">
       <Header />
-      <Hero />
+      <AnomalousMatterHero
+        title="Launch Sequence: Anomaly 12"
+        subtitle="Energy dances along unseen frontiers."
+        description="This demo shows how to override the default copy and integrate hero into a page layout."
+      />
       <About />
       <Experience />
       <Portfolio />
